@@ -1,0 +1,27 @@
+function [XTrainUpper,XTrainBottom,XValidUpper,XValidBottom,XTestUpper,XTestBottom,YTrain,YValid,YTest]=partitionData(augimdsUpper,augimdsBottom,TrainRatio,ValidRatio,numAll,labels)
+indices=randperm(numAll,numAll);
+TrainIdx=indices(1:round(numel(indices)*TrainRatio));
+ValidIdx=indices(round(numel(indices)*TrainRatio)+1:round(numel(indices)*(TrainRatio+ValidRatio)));
+TestIdx=indices(round(numel(indices)*(TrainRatio+ValidRatio))+1:end);
+auimdsTrainaugimdsUpper = partitionByIndex(augimdsUpper,TrainIdx);
+auimdsTrainBottom = partitionByIndex(augimdsBottom,TrainIdx);
+auimdsValidUpper = partitionByIndex(augimdsUpper,ValidIdx);
+auimdsValidBottom = partitionByIndex(augimdsBottom,ValidIdx);
+auimdsTestUpper = partitionByIndex(augimdsUpper,TestIdx);
+auimdsTestBottom = partitionByIndex(augimdsBottom,TestIdx);
+XTrainUpper=readall(auimdsTrainaugimdsUpper);
+XTrainUpper=cat(4,XTrainUpper.input{:});
+XTrainBottom=readall(auimdsTrainBottom);
+XTrainBottom=cat(4,XTrainBottom.input{:});
+XValidUpper=readall(auimdsValidUpper);
+XValidUpper=cat(4,XValidUpper.input{:});
+XValidBottom=readall(auimdsValidBottom);
+XValidBottom=cat(4,XValidBottom.input{:});
+XTestUpper=readall(auimdsTestUpper);
+XTestUpper=cat(4,XTestUpper.input{:});
+XTestBottom=readall(auimdsTestBottom);
+XTestBottom=cat(4,XTestBottom.input{:});
+YTrain=labels(TrainIdx);
+YValid=labels(ValidIdx);
+YTest=labels(TestIdx);
+end

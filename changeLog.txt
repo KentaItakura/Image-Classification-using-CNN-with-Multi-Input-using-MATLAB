@@ -1,0 +1,2 @@
+v2: The dlnet1 to 3 were merged into a single dlnet. Firstly uploaded into github as well as MATLAB file exchange
+v1: Three dlnet1 to 3 were prepared then trained using forward functions
