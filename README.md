@@ -1,9 +1,10 @@
+[![View Image Classification using CNN with Multi Input 複数の入力層を持つCNN on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://jp.mathworks.com/matlabcentral/fileexchange/74760-image-classification-using-cnn-with-multi-input-cnn)
 # Image Classification using Convolutional Neural Network with Multi-Input 
 
 **[English]**  
 This demo shows how to implement convolutional neural network (CNN) for image classification with multi-input using `custom loop` method. As an example, a dataset of hand-written digits called MNIST was divided into the upper half and down half as shown below and the upper and down part were fed into the multi input CNN.   
 **[Japanese]**  
-２種類の画像を入力できる畳み込みニューラルネットワークのデモです。２つの入力層があって、例えば、入力層Aには、動物の顔の画像を入力し、入力層Bには、その動物の足の画像を入力する、などです。2019bバージョンからカスタムループと呼ばれる方法が可能になり、深層学習のより詳細なカスタマイズが可能となりました。簡単にためせるように、手書き数字の上半分と下半分をそれぞれ別の入力層からインプットし、畳み込みなどを行った後に得られた特徴量を結合させ、さらに全結合層などで計算を進めています。よりこの例に適切なデータや課題などがございましたら教えていただけると幸いです。まだまだ作りこみ不足なところもあり、今後も更新していければよいと考えています。  
+２種類の画像を入力できる分類のための畳み込みニューラルネットワークのデモです。２つの入力層があって、例えば、入力層Aには、動物の顔の画像を入力し、入力層Bには、その動物の足の画像を入力する、などです。2019bバージョンからカスタムループと呼ばれる方法が可能になり、深層学習のより詳細なカスタマイズが可能となりました。簡単に試せるように、手書き数字の上半分と下半分をそれぞれ別の入力層からインプットし、畳み込みなどを行った後に得られた特徴量を結合させ、さらに全結合層などで計算を進めています。よりこの例に適切なデータや課題などがございましたら教えていただけると幸いです。まだまだ作りこみ不足なところもあり、今後も更新していければよいと考えています。  
 
 ![image_0.png](README_images/image_0.png)
 
